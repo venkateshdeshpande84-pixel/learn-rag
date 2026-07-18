@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh Deshpande | AI Product & Agile Project Manager</title>
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#5d687b;
+      --line:#dfe4ec;
+      --accent:#1f5f73;
+      --accent-soft:#eaf3f5;
+      --paper:#ffffff;
+      --page:#eef2f6;
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--page);
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    body{
+      padding:28px;
+    }
+
+    .resume{
+      width:210mm;
+      min-height:297mm;
+      margin:0 auto;
+      background:var(--paper);
+      box-shadow:0 18px 50px rgba(23,32,51,.13);
+      display:grid;
+      grid-template-columns:66mm 1fr;
+      overflow:hidden;
+    }
+
+    aside{
+      background:var(--ink);
+      color:#fff;
+      padding:25mm 9mm 15mm;
+    }
+
+    main{
+      padding:18mm 14mm 13mm;
+    }
+
+    h1,h2,h3,p{margin:0}
+
+    .name{
+      font-size:30px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+      font-weight:800;
+      margin-bottom:7px;
+    }
+
+    .headline{
+      color:var(--accent);
+      font-size:12.5px;
+      line-height:1.45;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    .location{
+      color:var(--muted);
+      font-size:10.5px;
+      margin-bottom:17px;
+    }
+
+    .section{
+      margin-top:15px;
+    }
+
+    .section-title{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-weight:800;
+      margin-bottom:8px;
+      padding-bottom:5px;
+      border-bottom:2px solid var(--line);
+    }
+
+    .summary{
+      font-size:10.25px;
+      line-height:1.55;
+      color:#344055;
+    }
+
+    .job{
+      margin-bottom:13px;
+    }
+
+    .job-head{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:10px;
+      align-items:start;
+      margin-bottom:2px;
+    }
+
+    .job-title{
+      font-size:12px;
+      font-weight:800;
+      color:var(--ink);
+    }
+
+    .company{
+      font-size:11px;
+      font-weight:700;
+      color:var(--accent);
+      margin-top:2px;
+    }
+
+    .date{
+      font-size:9px;
+      color:var(--muted);
+      white-space:nowrap;
+      text-align:right;
+      line-height:1.4;
+    }
+
+    .job-location{
+      font-size:9.2px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    ul{
+      margin:0;
+      padding-left:14px;
+    }
+
+    li{
+      font-size:9.5px;
+      line-height:1.43;
+      color:#344055;
+      margin-bottom:3px;
+    }
+
+    .education-item{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:10px;
+      margin-bottom:7px;
+    }
+
+    .degree{
+      font-size:9.7px;
+      line-height:1.35;
+      color:#344055;
+    }
+
+    .school{
+      display:block;
+      color:var(--ink);
+      font-weight:800;
+      font-size:10px;
+      margin-bottom:1px;
+    }
+
+    .edu-date{
+      font-size:8.8px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    aside .side-title{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1.45px;
+      color:#98c8d5;
+      font-weight:800;
+      margin:17px 0 8px;
+    }
+
+    aside .side-title:first-of-type{margin-top:0}
+
+    .contact a,
+    .contact div{
+      display:block;
+      color:#f3f6fa;
+      text-decoration:none;
+      font-size:9.3px;
+      line-height:1.45;
+      margin-bottom:6px;
+      overflow-wrap:anywhere;
+    }
+
+    .tag-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      gap:5px;
+    }
+
+    .tag{
+      font-size:8.4px;
+      line-height:1.25;
+      padding:5px 7px;
+      border-radius:999px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+    }
+
+    .side-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .side-list li{
+      color:#eef3f6;
+      font-size:8.9px;
+      line-height:1.4;
+      margin-bottom:5px;
+      padding:0;
+    }
+
+    .side-note{
+      color:#cbd5df;
+      font-size:8.4px;
+      line-height:1.35;
+    }
+
+    .accent-box{
+      background:var(--accent-soft);
+      border-left:3px solid var(--accent);
+      padding:8px 10px;
+      margin-top:8px;
+    }
+
+    .accent-box p{
+      font-size:9.2px;
+      line-height:1.42;
+      color:#314252;
+    }
+
+    @media (max-width: 900px){
+      body{padding:0}
+      .resume{
+        width:100%;
+        min-height:0;
+        grid-template-columns:1fr;
+        box-shadow:none;
+      }
+      aside{padding:28px}
+      main{padding:28px}
+      .job-head,.education-item{grid-template-columns:1fr}
+      .date,.edu-date{text-align:left}
+    }
+
+    @page{
+      size:A4;
+      margin:0;
+    }
+
+    @media print{
+      html,body{
+        width:210mm;
+        height:297mm;
+        background:#fff;
+      }
+      body{padding:0}
+      .resume{
+        width:210mm;
+        height:297mm;
+        min-height:297mm;
+        box-shadow:none;
+        page-break-after:avoid;
+      }
+      a{color:inherit}
+    }
+  </style>
+</head>
+<body>
+  <article class="resume">
+    <aside>
+      <div class="side-title">Contact</div>
+      <div class="contact">
+        <div>+91 91561 56171</div>
+        <a href="mailto:venkateshdeshpande84@gmail.com">venkateshdeshpande84@gmail.com</a>
+        <a href="https://www.linkedin.com/in/venkatesh-deshpande-productmanagement">LinkedIn Profile</a>
+        <a href="https://www.notion.so/Venkatesh-Deshpande-Project-Product-Portfolio-2e8025e164a780a9b7adcd858421a096">Product & Project Portfolio</a>
+      </div>
+
+      <div class="side-title">Core Skills</div>
+      <div class="tag-wrap">
+        <span class="tag">Workload Prioritization</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Prompt Engineering</span>
+        <span class="tag">Agile</span>
+        <span class="tag">Kanban</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Effort Estimation</span>
+        <span class="tag">API Integrations</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Confluence</span>
+      </div>
+
+      <div class="side-title">Certifications</div>
+      <ul class="side-list">
+        <li>Certified SAFe® Agilist</li>
+        <li>AI for Product Manager</li>
+        <li>Product Management Training Certificate</li>
+        <li>Scrum Master Accelerator Program</li>
+        <li>Agile Scrum for Beginners + Scrum Master Certification Prep</li>
+      </ul>
+
+      <div class="side-title">Languages</div>
+      <ul class="side-list">
+        <li>English <span class="side-note">— Professional Working</span></li>
+        <li>Hindi <span class="side-note">— Professional Working</span></li>
+        <li>Marathi <span class="side-note">— Professional Working</span></li>
+      </ul>
+
+      <div class="side-title">Recognition</div>
+      <ul class="side-list">
+        <li>Inter Engineering Diploma Student's Sports Association</li>
+        <li>JIDNYASA</li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <h1 class="name">Venkatesh Deshpande</h1>
+        <p class="headline">AI Product Management · Agile Project Management · PSM I · SAFe 6.0 · Dual MBA</p>
+        <p class="location">Pune District, Maharashtra, India</p>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">Professional Profile</h2>
+        <p class="summary">
+          Product and project leader with 8+ years of experience across IT, mechanical, and construction domains.
+          Experienced in B2B and SaaS environments, translating user and stakeholder feedback into actionable features,
+          while leading structured delivery, risk management, and cross-functional alignment. Brings a practical interest
+          in AI, LLMs, automation, intelligent workflows, and data-driven products to improve decisions, user experience,
+          and operational efficiency.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Project Manager</div>
+              <div class="company">nCircle Tech</div>
+            </div>
+            <div class="date">June 2025 – Present</div>
+          </div>
+          <div class="job-location">Pune, Maharashtra, India</div>
+          <ul>
+            <li>Bridge technical execution and strategic product direction across multiple client portfolios.</li>
+            <li>Act as the primary liaison between clients, product owners, and engineering teams; translate business requirements into actionable development tasks.</li>
+            <li>Establish Agile and Kanban workflows, leading sprint planning, backlog grooming, Jira and Confluence tracking, reporting, and retrospectives.</li>
+            <li>Lead technical and business estimation with architects and developers, considering system dependencies, Revit plug-in API constraints, cost, and schedule baselines.</li>
+            <li>Led integrations between Revit modules, Power BI dashboards, and external applications using RESTful services and JSON schema validation.</li>
+            <li>Collaborate on lightweight data pipelines for product analytics and real-time synchronization, while mentoring junior engineers and project coordinators.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Project Manager</div>
+              <div class="company">CML Security, LLC</div>
+            </div>
+            <div class="date">Aug 2018 – Nov 2024</div>
+          </div>
+          <div class="job-location">San Antonio, Texas</div>
+          <ul>
+            <li>Contributed to multi-million-dollar correctional facility projects for a ~$45M integrated security and detention systems organization.</li>
+            <li>Led cross-functional Agile delivery through sprint planning, daily stand-ups, reviews, and retrospectives, improving visibility into progress, risks, and dependencies.</li>
+            <li>Combined Scrum, Kanban, and Lean practices to improve workflow efficiency and reduce delivery bottlenecks.</li>
+            <li>Coached teams and stakeholders on Agile ways of working, strengthening accountability, collaboration, and delivery predictability.</li>
+            <li>Aligned engineering execution with on-site operations and proactively tracked integration and network risks to prevent delays and cost overruns.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-item">
+          <div class="degree"><span class="school">Campbellsville University</span>MBA, Organizational Leadership</div>
+          <div class="edu-date">2021 – 2023</div>
+        </div>
+
+        <div class="education-item">
+          <div class="degree"><span class="school">University of Wyoming</span>BE / BASc, Mechanical Engineering</div>
+          <div class="edu-date">2013 – 2018</div>
+        </div>
+
+        <div class="education-item">
+          <div class="degree"><span class="school">K. K. Wagh Polytechnic</span>Associate's Degree, Mechanical Engineering</div>
+          <div class="edu-date">2010 – 2013</div>
+        </div>
+
+        <div class="education-item">
+          <div class="degree"><span class="school">HelloPM</span>Product Management</div>
+          <div class="edu-date">Apr – Sep 2025</div>
+        </div>
+      </section>
+
+      <div class="accent-box">
+        <p><strong>Positioning:</strong> A bridge between strategy and execution—comfortable refining product direction, applying AI where it adds value, and leading teams toward meaningful outcomes.</p>
+      </div>
+    </main>
+  </article>
+</body>
+</html>
